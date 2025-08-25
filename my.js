@@ -1,17 +1,26 @@
-const express = require("express");
-const app = express();
+const express=require('express')
+const app=express()
+const port=4000
+app.get('/',(req,res)=>{
+    console.log()
+    res.json({msg:"hello java"})
+})
+//getting the data
+app.get('/movie',(req,res)=>{
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+})
+//i create the data
+app.post('/movie',(req,res)=>{
 
-app.get("/ok", (req, res) => {
-  res.send("OK");
-});
+})
+// update the data
+app.put('/movie/:id',(req,res)=>{
 
-app.get("/done", (req, res) => {
-  res.send("Done");
-});
+})
+//delet the data
+app.delete('/movie/:id',(req,res)=>{
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+})
+app.listen(port,(r)=>{
+    console.log("server is listen ",port)
+})
